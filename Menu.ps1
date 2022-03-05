@@ -11,8 +11,8 @@ function Show-Menu
     Write-Host "================ $Title ================"
     
     Write-Host "Desktop: Press '1' for this option."
-    Write-Host "Documents: Press '2' for this option."
-    Write-Host "Downloads: Press '3' for this option."
+    Write-Host "Downloads: Press '2' for this option."
+    Write-Host "Documents: Press '3' for this option."
     Write-Host "Q: Press 'Q' to quit."
 }
 
