@@ -1,5 +1,7 @@
 ﻿#To run   & "C:\Users\void9\Desktop\Menu.ps1"
 
+$usb_drive = try { $(Get-WmiObject Win32_LogicalDisk | Where-Object { $_.VolumeName -match "USB_BACKUP"}).DeviceID.ToString() } catch { exit 1 }
+
 function Show-Menu
 {
     param (
