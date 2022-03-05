@@ -28,7 +28,7 @@ do
              Copy-Item -Path $env:USERPROFILE\Downloads\ -Destination $usb_drive\downloads_copy\ -Force -Recurse -PassThru
          } '3' {
              Copy-Item -Path $env:USERPROFILE\Documents\ -Destination $usb_drive\documents_copy\ -Force -Recurse -PassThru
-         } 'q' {
+         } 'Q' {
              exit
          }
      }
