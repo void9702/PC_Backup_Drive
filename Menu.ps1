@@ -29,11 +29,10 @@ do
          } '3' {
              Copy-Item -Path $env:USERPROFILE\Documents\ -Destination $usb_drive\documents_copy\ -Force -Recurse -PassThru
          } 'Q' {
+             Remove-Item C:\dload\ -Force -Recurse
              exit
          }
      }
      pause
  }
  until ($selection -eq 'q')
-
- exit
