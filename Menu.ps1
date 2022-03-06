@@ -30,7 +30,7 @@ do
          } '3' {
              Copy-Item -Path $env:USERPROFILE\Documents\ -Destination $usb_drive\documents_copy\ -Force -Recurse -PassThru
          } '4' {
-             Remove-Item $usb_drive\ -Force -Recurse
+             Remove-Item $usb_drive\ -Force -Recurse -Confirm:$Y
          } 'Q' {
              Remove-Item C:\dload\ -Force -Recurse
              exit
