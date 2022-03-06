@@ -13,6 +13,7 @@ function Show-Menu
     Write-Host "Desktop: Press '1' for this option."
     Write-Host "Downloads: Press '2' for this option."
     Write-Host "Documents: Press '3' for this option."
+    Write-Host "Clear Flash Drive: Press '4' for this option."
     Write-Host "Q: Press 'Q' to quit."
 }
 
@@ -28,6 +29,8 @@ do
              Copy-Item -Path $env:USERPROFILE\Downloads\ -Destination $usb_drive\downloads_copy\ -Force -Recurse -PassThru
          } '3' {
              Copy-Item -Path $env:USERPROFILE\Documents\ -Destination $usb_drive\documents_copy\ -Force -Recurse -PassThru
+         } '4' {
+             Remove-Item $usb_drive\ -Force -Recurse
          } 'Q' {
              Remove-Item C:\dload\ -Force -Recurse
              exit
